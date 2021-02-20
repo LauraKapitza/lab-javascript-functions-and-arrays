@@ -9,7 +9,11 @@ function maxOfTwoNumbers(nb1, nb2) {
 // Iteration #2: Find longest word
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
-function findLongestWord (arr) {
+function findLongestWord(arr) {
+  // return null if empty arr
+  if (arr.length === 0) {
+    return null;
+  }
   //variable to store longest word
   let longestWord = "";
   //return null if array is empty
@@ -19,27 +23,34 @@ function findLongestWord (arr) {
   }
   for (let i = 0; i < arr.length; i++) {
     // comparing array item with current longest word
-    if ( arr[i].length <= longestWord.length) {
+    if (arr[i].length <= longestWord.length) {
       continue;
     } else {
       longestWord = arr[i]; //store longest word in longestWord
+<<<<<<< HEAD
     };
   };
   return longestWord;
   } 
+=======
+    }
+  }
+  return longestWord;
+}
+>>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
 findLongestWord(words);
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers (arr) {
+function sumNumbers(arr) {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
   return sum;
-};
+}
 
 sumNumbers(numbers);
 
@@ -76,12 +87,20 @@ sum(mixedArr);
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+<<<<<<< HEAD
 function averageNumbers (arr) {
   //return null if array is empty
   if (arr.length == 0) {
     return null;
   }
   //calculate average
+=======
+function averageNumbers(arr) {
+  // return null if empty arr
+  if (arr.length === 0) {
+    return null;
+  }
+>>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
   let sum = sumNumbers(arr);
   let denominator = arr.length;
   return sum / denominator;
@@ -103,11 +122,19 @@ const wordsArr = [
   "palace",
 ];
 
+<<<<<<< HEAD
 function averageWordLength (arr) {
   //return null if array is empty
   if (arr.length == 0) {
     return null;
   }  
+=======
+function averageWordLength(arr) {
+  // return null if empty arr
+  if (arr.length === 0) {
+    return null;
+  }
+>>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
   //sum up the length of each word
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -148,6 +175,7 @@ const wordsUnique = [
   "bring",
 ];
 
+<<<<<<< HEAD
 function uniquifyArray(arr) {
   //return null if array is empty
   if (arr.length == 0) {
@@ -163,6 +191,8 @@ function uniquifyArray(arr) {
 };
 uniquifyArray(wordsUnique);
 
+=======
+>>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
 // Iteration #6: Find elements
 const wordsFind = [
   "machine",
