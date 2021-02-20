@@ -27,17 +27,10 @@ function findLongestWord(arr) {
       continue;
     } else {
       longestWord = arr[i]; //store longest word in longestWord
-<<<<<<< HEAD
     };
   };
   return longestWord;
   } 
-=======
-    }
-  }
-  return longestWord;
-}
->>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
 findLongestWord(words);
 
 // Iteration #3: Calculate the sum
@@ -87,20 +80,11 @@ sum(mixedArr);
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-<<<<<<< HEAD
-function averageNumbers (arr) {
-  //return null if array is empty
-  if (arr.length == 0) {
-    return null;
-  }
-  //calculate average
-=======
 function averageNumbers(arr) {
   // return null if empty arr
   if (arr.length === 0) {
     return null;
   }
->>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
   let sum = sumNumbers(arr);
   let denominator = arr.length;
   return sum / denominator;
@@ -122,19 +106,11 @@ const wordsArr = [
   "palace",
 ];
 
-<<<<<<< HEAD
-function averageWordLength (arr) {
-  //return null if array is empty
-  if (arr.length == 0) {
-    return null;
-  }  
-=======
 function averageWordLength(arr) {
   // return null if empty arr
   if (arr.length === 0) {
     return null;
   }
->>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
   //sum up the length of each word
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -175,7 +151,6 @@ const wordsUnique = [
   "bring",
 ];
 
-<<<<<<< HEAD
 function uniquifyArray(arr) {
   //return null if array is empty
   if (arr.length == 0) {
@@ -191,8 +166,6 @@ function uniquifyArray(arr) {
 };
 uniquifyArray(wordsUnique);
 
-=======
->>>>>>> d33814bd9130b4abebbda4b35bc8b3b136dc6f6d
 // Iteration #6: Find elements
 const wordsFind = [
   "machine",
