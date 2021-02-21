@@ -203,7 +203,23 @@ const wordsCount = [
   "matter",
 ];
 
-// Iteration #8: Bonus
+function howManyTimes(arr, word) {
+  if (arr.length === 0) {
+    return 0;
+  };
+  word = word.toLowerCase();
+  let count = 0;
+  arr.forEach(element => {
+    if (element === word) {
+      count += 1;
+    };
+  });
+  return count;
+};
+howManyTimes(wordsCount, "Baby");
+
+// WIP
+// Iteration #8: Product of adjacent numbers (Bonus)
 
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -227,3 +243,40 @@ const matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48],
 ];
+
+//find greatest number(s) in matrix
+function greatestNumberInMatrix(matrix) {
+  let greatestNumber = {
+    number: 0,
+    positions: [{
+      x: 0,
+      y: 0
+    }]};
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] > greatestNumber['number']) {
+        greatestNumber['number'] = matrix[i][j];
+        greatestNumber['positions'] = [{ x: i, y: j }];
+      } else if (matrix[i][j] == greatestNumber['number']) {
+        greatestNumber['positions'].push({ x: i, y: j });
+      };
+    };
+  };
+  return greatestNumber;
+};
+
+//WIP
+//find greatest number around Matrix's greatest Number
+function greatestNumPairInMatrix(matrix) {
+  const startPositions = greatestNumberInMatrix(matrix).positions;
+  const positionsOfNextNumbers = [];
+  for ( i = 0; i < startPositions.length; i++) {
+      console.log(startPositions[i]);
+    };
+  return positionsOfNextNumbers;
+};
+greatestNumPairInMatrix(matrix);
+
+
+
+// Iteration 8.1: Product of diagonals (Bonus)
