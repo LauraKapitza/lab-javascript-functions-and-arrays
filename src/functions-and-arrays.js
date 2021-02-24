@@ -218,8 +218,8 @@ function howManyTimes(arr, word) {
 };
 howManyTimes(wordsCount, "Baby");
 
-// WIP
 // Iteration #8: Product of adjacent numbers (Bonus)
+// I have started the bonus but could not finish it.
 
 const matrix = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -265,18 +265,7 @@ function greatestNumberInMatrix(matrix) {
   return greatestNumber;
 };
 
-//WIP
 //find greatest number around Matrix's greatest Number
-function greatestNumPairInMatrix(matrix) {
-  const startPositions = greatestNumberInMatrix(matrix).positions;
-  const positionsOfNextNumbers = [];
-  for ( i = 0; i < startPositions.length; i++) {
-      console.log(startPositions[i]);
-    };
-  return positionsOfNextNumbers;
-};
-greatestNumPairInMatrix(matrix);
-
 
 
 // Iteration 8.1: Product of diagonals (Bonus)

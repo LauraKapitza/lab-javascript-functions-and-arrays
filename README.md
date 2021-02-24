@@ -229,7 +229,7 @@ What is the greatest product of four adjacent numbers? We consider adjacent any 
 For example, if we have a 5x5 Matrix like:
 
 ```bash
-[ 1,  2, 3, 4, 5]
+[ 1,  2, 3, 4, 21]
 [ 1, 20, 3, 4, 5]
 [ 1, 20, 3, 4, 5]
 [ 1, 20, 3, 4, 5]
