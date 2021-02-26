@@ -244,28 +244,38 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48],
 ];
 
-//find greatest number(s) in matrix
-function greatestNumberInMatrix(matrix) {
-  let greatestNumber = {
-    number: 0,
-    positions: [{
-      x: 0,
-      y: 0
-    }]};
+
+function greatestProduct(matrix) {
+  let product = {number: 0}; //variable to store the greatest product of the matri
+  let horizontalProduct = 0; //variable to store greatest horizontal product
+  let verticalProduct = 0; //variable to store greatest vertical product
+  //looping through the outer array
   for (let i = 0; i < matrix.length; i++) {
+    //looping through the arrays within the array 
     for (let j = 0; j < matrix[i].length; j++) {
-      if (matrix[i][j] > greatestNumber['number']) {
-        greatestNumber['number'] = matrix[i][j];
-        greatestNumber['positions'] = [{ x: i, y: j }];
-      } else if (matrix[i][j] == greatestNumber['number']) {
-        greatestNumber['positions'].push({ x: i, y: j });
+      //calculation should only perfomr within the array
+      if ((j + 3) < matrix.length) {
+        horizontalProduct = matrix[i][j] * matrix[i][j + 1]  * matrix[i][j + 2] * matrix[i][j + 3];
+        //store product if it is greater than the currently stored product
+        if (horizontalProduct > product.number) {
+          product.number = horizontalProduct;
+        }
+      };
+      //calculation should only perfomr within the array
+      if ((i + 3) < matrix.length) {
+        verticalProduct = matrix[i][j] * matrix[i + 1][j] * matrix[i + 2][j] * matrix[i + 3][j];
+        //store product if it is greater than the currently stored product
+        if (verticalProduct > product.number) {
+          product.number = verticalProduct;
+        }
       };
     };
   };
-  return greatestNumber;
+  //return greatest product of the matrix
+  return product;
 };
-
-//find greatest number around Matrix's greatest Number
+//call the function
+greatestProduct(matrix)
 
 
 // Iteration 8.1: Product of diagonals (Bonus)
